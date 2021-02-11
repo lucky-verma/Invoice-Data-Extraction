@@ -30,7 +30,7 @@ exp_path = os.path.join(runs, "exp")
 
 def run(model, conf, image):
     subprocess.run('ls', shell=True)
-    subprocess.run('python detect.py --weights {model} --img 1024 --conf {conf} --source {image}'.format(model=model, image=image, conf=conf))
+    subprocess.run('python detect.py --weights {model} --img 1024 --conf {conf} --source {image}'.format(model=model, image=image, conf=conf), shell=True)
 
 
 # model = load_model()
