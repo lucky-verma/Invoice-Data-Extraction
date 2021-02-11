@@ -29,7 +29,7 @@ exp_path = os.path.join(runs, "exp")
 # python detect.py --weights runs/train/{ex(n)}/weights/best.pt --img 640 --conf 0.2 --source test/images
 
 def run(model, conf, image):
-    # subprocess.run('dir', shell=True)
+    subprocess.run('ls', shell=True)
     subprocess.run('python detect.py --weights {model} --img 1024 --conf {conf} --source {image}'.format(model=model, image=image, conf=conf))
 
 
