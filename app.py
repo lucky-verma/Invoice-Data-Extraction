@@ -52,7 +52,8 @@ else:
     st.image("audacious.jpg", caption='invoice?', use_column_width=True)
     if st.button("Process"):
         subprocess.run('ls runs/detect/', shell=True)
-        run(model, slider, img)
+        models = 'best.pt'
+        run(models, slider, img)
         st.spinner()
         with st.spinner(text='In progress'):
             time.sleep(2)
