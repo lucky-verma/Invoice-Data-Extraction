@@ -69,5 +69,6 @@ else:
                 print('SUCCESSFULLY DELETED')
         except:
             pass
+        subprocess.run('ls runs/detect/', shell=True)
         st.success('Success')
         pass
