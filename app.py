@@ -64,5 +64,12 @@ else:
         st.image(res_img_array, use_column_width=True)
         shutil.rmtree(exp_path, ignore_errors=False)
         subprocess.run('ls runs/detect/', shell=True)
+        dir_name = os.getcwd()
+        test = os.listdir(dir_name)
+        for item in test:
+            if item.endswith(".pt"):
+                os.remove(os.path.join(dir_name, item))
+                print('dElEtInG')
+        subprocess.run('ls', shell=True)
         st.success('Success')
         pass
