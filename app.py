@@ -51,8 +51,7 @@ else:
     img = "audacious.jpg"
     st.image("audacious.jpg", caption='invoice?', use_column_width=True)
     if st.button("Process"):
-        models = 'best.pt'
-        run(models, slider, img)
+        run(model, slider, img)
         st.spinner()
         with st.spinner(text='In progress'):
             time.sleep(2)
