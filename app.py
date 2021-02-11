@@ -14,8 +14,8 @@ model = wget.download(url)
 if model is not None:
     print('Model DOWNLOADED from s3')
 
-runs = "runs/detect/"
-exp_path = os.path.join(runs, "exp")
+runs = "runs/"
+exp_path = os.path.join(runs, "detect")
 
 
 
@@ -51,7 +51,6 @@ else:
     img = "audacious.jpg"
     st.image("audacious.jpg", caption='invoice?', use_column_width=True)
     if st.button("Process"):
-        subprocess.run('ls runs/detect/', shell=True)
         models = 'best.pt'
         run(models, slider, img)
         st.spinner()
@@ -64,11 +63,6 @@ else:
         res_img_array = np.array(result_image)
         st.image(res_img_array, use_column_width=True)
         shutil.rmtree(exp_path, ignore_errors=False)
-        try:
-            if subprocess.run('ls runs/detect/', shell=True) is None:
-                print('SUCCESSFULLY DELETED')
-        except:
-            pass
         subprocess.run('ls runs/detect/', shell=True)
         st.success('Success')
         pass
