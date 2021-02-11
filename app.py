@@ -36,10 +36,10 @@ def run(model, conf, image):
 # model = load_model()
 
 st.title('VAST: Invoice Data Extraction')
-
-file = st.file_uploader('Upload here', type=['jpg', 'png', 'jpeg', 'webp'])
 st.write('## Adjust slider for precision Threshold')
 slider = st.slider('Precision/Confidence Slider', min_value=0.4, max_value=0.9)
+
+file = st.file_uploader('Upload here', type=['jpg', 'png', 'jpeg', 'webp'])
 
 if file is None:
     st.write("### Please upload your Invoice IMAGE")
