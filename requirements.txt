@@ -12,7 +12,8 @@ Pillow
 PyYAML>=5.3.1
 scipy>=1.4.1
 tensorboard>=2.2
-torchvision>=0.8.1
+https://download.pytorch.org/whl/cpu/torch-1.7.1%2Bcpu-cp37-cp37m-linux_x86_64.whl
+https://download.pytorch.org/whl/cpu/torchvision-0.8.2%2Bcpu-cp37-cp37m-linux_x86_64.whl
 tqdm>=4.41.0
 
 # logging -------------------------------------
