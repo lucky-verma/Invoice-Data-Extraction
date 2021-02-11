@@ -9,7 +9,7 @@ import subprocess
 import numpy as np
 import wget
 
-url = "https://mega.nz/file/JBtS2ZBB#b7_TdwSMIQC1A42CnFnmu-ef4M-g2fLXao_RZ7SebT4"
+url = "https://awscdk-documentsbucket9ec9deb9-i5bemy0nz6wp.s3-ap-southeast-2.amazonaws.com/best.pt"
 model = wget.download(url)
 
 runs = "runs/detect/"
