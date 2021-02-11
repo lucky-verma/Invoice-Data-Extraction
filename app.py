@@ -51,12 +51,15 @@ else:
     img = "audacious.jpg"
     st.image("audacious.jpg", caption='invoice?', use_column_width=True)
     if st.button("Process"):
+        subprocess.run('ls runs/detect/', shell=True)
         run(model, slider, img)
         st.spinner()
         with st.spinner(text='In progress'):
             time.sleep(2)
             st.success('Done')
         st.balloons()
+        print('modelling DONE')
+        subprocess.run('ls runs/detect/', shell=True)
         result_image = Image.open("runs/detect/exp/audacious.jpg")
         res_img_array = np.array(result_image)
         st.image(res_img_array, use_column_width=True)
