@@ -60,10 +60,14 @@ else:
             st.success('Done')
         st.balloons()
         print('modelling DONE')
-        subprocess.run('ls runs/detect/', shell=True)
         result_image = Image.open("runs/detect/exp/audacious.jpg")
         res_img_array = np.array(result_image)
         st.image(res_img_array, use_column_width=True)
         shutil.rmtree(exp_path, ignore_errors=False)
+        try:
+            if subprocess.run('ls runs/detect/', shell=True) is None:
+                print('SUCCESSFULLY DELETED')
+        except:
+            pass
         st.success('Success')
         pass
