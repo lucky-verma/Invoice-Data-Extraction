@@ -11,6 +11,8 @@ import wget
 
 url = "https://awscdk-documentsbucket9ec9deb9-i5bemy0nz6wp.s3-ap-southeast-2.amazonaws.com/best.pt"
 model = wget.download(url)
+if model is not None:
+    print('Model DOWNLOADED from s3')
 
 runs = "runs/detect/"
 exp_path = os.path.join(runs, "exp")
