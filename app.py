@@ -9,21 +9,17 @@ import subprocess
 import numpy as np
 import wget
 
-url = "https://awscdk-documentsbucket9ec9deb9-i5bemy0nz6wp.s3-ap-southeast-2.amazonaws.com/best.pt"
-model = wget.download(url)
-if model is not None:
-    print('Model DOWNLOADED from s3')
+@st.cache(allow_output_mutation=True)
+def load_model():
+    url = "https://awscdk-documentsbucket9ec9deb9-i5bemy0nz6wp.s3-ap-southeast-2.amazonaws.com/best.pt"
+    model = wget.download(url)
+    if model is not None:
+        print('Model DOWNLOADED from s3')
+    return model
+
 
 runs = "runs/"
 exp_path = os.path.join(runs, "detect")
-
-
-
-
-# @st.cache(allow_output_mutation=True)
-# def load_model():
-#     model = "yolov5/runs/train/exp/weights/best.pt"
-#     return model
 
 
 # python detect.py --weights runs/train/{ex(n)}/weights/best.pt --img 640 --conf 0.2 --source test/images
@@ -33,7 +29,7 @@ def run(model, conf, image):
     subprocess.run('python detect.py --weights {model} --img 1024 --conf {conf} --source {image}'.format(model=model, image=image, conf=conf), shell=True)
 
 
-# model = load_model()
+model = load_model()
 
 st.title('VAST: Invoice Data Extraction')
 st.write('## Adjust slider for precision Threshold')
@@ -52,11 +48,10 @@ else:
     st.image("audacious.jpg", caption='invoice?', use_column_width=True)
     if st.button("Process"):
         models = 'best.pt'
-        run(models, slider, img)
         st.spinner()
-        with st.spinner(text='In progress'):
-            time.sleep(2)
-            st.success('Done')
+        st.spinner(text='In progress')
+        run(models, slider, img)
+        st.success('Done')
         st.balloons()
         print('modelling DONE')
         result_image = Image.open("runs/detect/exp/audacious.jpg")
@@ -66,10 +61,10 @@ else:
         subprocess.run('ls runs/detect/', shell=True)
         dir_name = os.getcwd()
         test = os.listdir(dir_name)
-        for item in test:
-            if item.endswith(".pt"):
-                os.remove(os.path.join(dir_name, item))
-                print('dElEtInG')
+        # for item in test:
+        #     if item.endswith(".pt"):
+        #         os.remove(os.path.join(dir_name, item))
+        #         print('dElEtInG')
         subprocess.run('ls', shell=True)
         st.success('Success')
         pass
