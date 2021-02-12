@@ -29,7 +29,7 @@ def run(model, conf, image):
     subprocess.run('python detect.py --weights {model} --img 1024 --conf {conf} --source {image}'.format(model=model, image=image, conf=conf), shell=True)
 
 
-models = load_model()
+model = load_model()
 
 st.title('VAST: Invoice Data Extraction')
 st.write('## Adjust slider for precision Threshold')
@@ -47,7 +47,7 @@ else:
     img = "audacious.jpg"
     st.image("audacious.jpg", caption='invoice?', use_column_width=True)
     if st.button("Process"):
-        # models = 'best.pt'
+        models = 'best.pt'
         st.spinner()
         st.spinner(text='In progress')
         run(models, slider, img)
