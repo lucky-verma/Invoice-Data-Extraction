@@ -1,5 +1,4 @@
 streamlit
-imutils==0.5.4
 wget
 Cython
 PyYAML>=5.3.1
@@ -39,7 +38,6 @@ html5lib==0.9999999
 icc-rt==2019.0
 idna==2.10
 importlib-metadata==3.4.0
-imutils==0.5.4
 intel-openmp==2021.1.2
 ipykernel==5.4.3
 ipython==7.16.1
