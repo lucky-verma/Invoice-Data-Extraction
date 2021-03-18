@@ -1,3 +1,4 @@
+imutils
 streamlit
 wget
 Cython
