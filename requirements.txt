@@ -2,9 +2,8 @@
 
 # base ----------------------------------------
 streamlit
-imutils
+imutils==0.5.4
 wget
-imutils
 Cython
 matplotlib>=3.2.2
 numpy>=1.18.5
