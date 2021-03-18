@@ -2,6 +2,7 @@
 
 # base ----------------------------------------
 streamlit
+imutils
 wget
 imutils
 Cython
