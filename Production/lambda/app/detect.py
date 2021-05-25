@@ -21,7 +21,7 @@ from utils.torch_utils import select_device, load_classifier, time_synchronized
 
 # reader = easyocr.Reader(['en'])  # need to run only once to load model into memory
 
-best_model = "weights/model.pt"
+best_model = "model.pt"
 
 
 def detect(image, weights):
