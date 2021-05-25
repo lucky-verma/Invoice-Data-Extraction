@@ -1,0 +1,34 @@
+WARNING: --img-size 1200 must be multiple of max stride 32, updating to 1216
+WARNING: --img-size 1200 must be multiple of max stride 32, updating to 1216
+[34m[1mtrain: [0mScanning 'train\labels.cache' for images and labels... 186 found, 0 missing, 0 empty, 0 corrupted: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 186/186 [00:00<?, ?it/s][0m
+[34m[1mval: [0mScanning 'valid\labels.cache' for images and labels... 21 found, 0 missing, 0 empty, 0 corrupted: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [00:00<?, ?it/s][0m[34m[1mtrain: [0mScanning 'train\labels.cache' for images and labels... 186 found, 0 missing, 0 empty, 0 corrupted: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 186/186 [00:06<?, ?it/s][0m
+[34m[1mval: [0mScanning 'valid\labels.cache' for images and labels... 21 found, 0 missing, 0 empty, 0 corrupted: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [00:00<?, ?it/s][0m
+Plotting labels... 
+Traceback (most recent call last):
+  File "train.py", line 526, in <module>
+    train(hyp, opt, device, tb_writer, wandb)
+  File "train.py", line 207, in train
+    plot_labels(labels, save_dir, loggers)
+  File "C:\Users\lucki\WORK\OFFICE\VAST\Invoice\yolov5-master\utils\plots.py", line 267, in plot_labels
+    sns.pairplot(x, corner=True, diag_kind='auto', kind='hist', diag_kws=dict(bins=50), plot_kws=dict(pmax=0.9))
+  File "C:\Users\lucki\WORK\Anaconda3\envs\Invoice\lib\site-packages\seaborn\_decorators.py", line 46, in inner_f
+    return f(**kwargs)
+  File "C:\Users\lucki\WORK\Anaconda3\envs\Invoice\lib\site-packages\seaborn\axisgrid.py", line 1989, in pairplot
+    grid = PairGrid(data, vars=vars, x_vars=x_vars, y_vars=y_vars, hue=hue,
+  File "C:\Users\lucki\WORK\Anaconda3\envs\Invoice\lib\site-packages\seaborn\_decorators.py", line 46, in inner_f
+    return f(**kwargs)
+  File "C:\Users\lucki\WORK\Anaconda3\envs\Invoice\lib\site-packages\seaborn\axisgrid.py", line 1250, in __init__
+    self.tight_layout(pad=layout_pad)
+  File "C:\Users\lucki\WORK\Anaconda3\envs\Invoice\lib\site-packages\seaborn\axisgrid.py", line 64, in tight_layout
+    self.fig.tight_layout(*args, **kwargs)
+  File "C:\Users\lucki\WORK\Anaconda3\envs\Invoice\lib\site-packages\matplotlib\cbook\deprecation.py", line 411, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "C:\Users\lucki\WORK\Anaconda3\envs\Invoice\lib\site-packages\matplotlib\figure.py", line 2608, in tight_layout
+    renderer = get_renderer(self)
+  File "C:\Users\lucki\WORK\Anaconda3\envs\Invoice\lib\site-packages\matplotlib\tight_layout.py", line 173, in get_renderer
+    return canvas.get_renderer()
+  File "C:\Users\lucki\WORK\Anaconda3\envs\Invoice\lib\site-packages\matplotlib\backends\backend_agg.py", line 418, in get_renderer
+    self.renderer = RendererAgg(w, h, self.figure.dpi)
+  File "C:\Users\lucki\WORK\Anaconda3\envs\Invoice\lib\site-packages\matplotlib\backends\backend_agg.py", line 96, in __init__
+    self._renderer = _RendererAgg(int(width), int(height), dpi)
+MemoryError: In RendererAgg: Out of memory

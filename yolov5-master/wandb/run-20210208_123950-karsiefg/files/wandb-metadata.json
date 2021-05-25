@@ -1,0 +1,31 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.8.6",
+    "heartbeatAt": "2021-02-08T07:09:53.117867",
+    "startedAt": "2021-02-08T07:09:50.825344",
+    "docker": null,
+    "gpu": "GeForce RTX 2070 SUPER",
+    "gpu_count": 1,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [
+        "--img",
+        "1600",
+        "--batch",
+        "2",
+        "--epochs",
+        "300",
+        "--data",
+        "train\\data.yaml",
+        "--cfg",
+        "models\\yolov5x.yaml",
+        "--weights",
+        "models\\yolov5x6.pt"
+    ],
+    "state": "running",
+    "codePath": "train.py",
+    "program": "train.py",
+    "host": "DESKTOP-8KMLU46",
+    "username": "lucki",
+    "executable": "C:\\Users\\lucki\\WORK\\Anaconda3\\envs\\Invoice\\python.exe"
+}

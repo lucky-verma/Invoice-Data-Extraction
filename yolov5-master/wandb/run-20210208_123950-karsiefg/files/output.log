@@ -1,0 +1,46 @@
+[34m[1mtrain: [0mScanning 'train\labels.cache' for images and labels... 186 found, 0 missing, 0 empty, 0 corrupted: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 186/186 [00:00<?, ?it/s][0m
+[34m[1mval: [0mScanning 'valid\labels.cache' for images and labels... 21 found, 0 missing, 0 empty, 0 corrupted: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [00:00<?, ?it/s][0m[34m[1mtrain: [0mScanning 'train\labels.cache' for images and labels... 186 found, 0 missing, 0 empty, 0 corrupted: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 186/186 [00:06<?, ?it/s][0m
+[34m[1mval: [0mScanning 'valid\labels.cache' for images and labels... 21 found, 0 missing, 0 empty, 0 corrupted: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [00:00<?, ?it/s][0m
+Plotting labels... 
+
+[34m[1mautoanchor: [0mAnalyzing anchors... anchors/target = 1.70, Best Possible Recall (BPR) = 0.8548. Attempting to improve anchors, please wait...
+[34m[1mautoanchor: [0mRunning kmeans for 9 anchors on 434 points...
+[34m[1mautoanchor: [0mthr=0.25: 1.0000 best possible recall, 7.74 anchors past thr
+[34m[1mautoanchor: [0mn=9, img_size=1600, metric_all=0.495/0.836-mean/best, past_thr=0.543-mean: 221,28,  128,72,  264,38,  350,31,  338,51,  562,33,  160,138,  1035,35,  536,74
+[34m[1mautoanchor: [0mEvolving anchors with Genetic Algorithm::   0%|                                                                                                                                                                                       | 0/1000 [00:00<?, ?it/s][0m[34m[1mautoanchor: [0mEvolving anchors with Genetic Algorithm: fitness = 0.8394:  20%|██████████████████████████████▎                                                                                                                           | 197/1000 [00:00<00:00, 1969.52it/s][0m[34m[1mautoanchor: [0mEvolving anchors with Genetic Algorithm: fitness = 0.8433:  39%|████████████████████████████████████████████████████████████▋                                                                                             | 394/1000 [00:00<00:00, 1819.69it/s][0m[34m[1mautoanchor: [0mEvolving anchors with Genetic Algorithm: fitness = 0.8447:  58%|████████████████████████████████████████████████████████████████████████████████████████▊                                                                 | 577/1000 [00:00<00:00, 1697.87it/s][0m[34m[1mautoanchor: [0mEvolving anchors with Genetic Algorithm: fitness = 0.8451:  75%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                                      | 748/1000 [00:00<00:00, 1671.47it/s][0m[34m[1mautoanchor: [0mEvolving anchors with Genetic Algorithm: fitness = 0.8452:  92%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████             | 916/1000 [00:00<00:00, 1651.76it/s][0m[34m[1mautoanchor: [0mEvolving anchors with Genetic Algorithm: fitness = 0.8453: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 1691.66it/s][0m
+[34m[1mautoanchor: [0mthr=0.25: 1.0000 best possible recall, 8.01 anchors past thr
+[34m[1mautoanchor: [0mn=9, img_size=1600, metric_all=0.520/0.845-mean/best, past_thr=0.559-mean: 232,29,  325,26,  129,72,  254,38,  336,39,  465,30,  158,135,  836,33,  504,73
+[34m[1mautoanchor: [0mNew anchors saved to model. Update model *.yaml to use these anchors in the future.
+
+Image sizes 1600 train, 1600 test
+Using 2 dataloader workers
+Logging results to runs\train\exp4
+Starting training for 300 epochs...
+
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+  0%|                                                                                                                                                                                                                                               | 0/93 [00:00<?, ?it/s]  0%|                                                                                                                                                                                                                                               | 0/93 [00:03<?, ?it/s]
+Traceback (most recent call last):
+  File "train.py", line 526, in <module>
+    train(hyp, opt, device, tb_writer, wandb)
+  File "train.py", line 292, in train
+    pred = model(imgs)  # forward
+  File "C:\Users\lucki\WORK\Anaconda3\envs\Invoice\lib\site-packages\torch\nn\modules\module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "C:\Users\lucki\WORK\OFFICE\VAST\Invoice\yolov5-master\models\yolo.py", line 119, in forward
+    return self.forward_once(x, profile)  # single-scale inference, train
+  File "C:\Users\lucki\WORK\OFFICE\VAST\Invoice\yolov5-master\models\yolo.py", line 135, in forward_once
+    x = m(x)  # run
+  File "C:\Users\lucki\WORK\Anaconda3\envs\Invoice\lib\site-packages\torch\nn\modules\module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "C:\Users\lucki\WORK\OFFICE\VAST\Invoice\yolov5-master\models\common.py", line 87, in forward
+    return self.cv3(torch.cat((self.m(self.cv1(x)), self.cv2(x)), dim=1))
+  File "C:\Users\lucki\WORK\Anaconda3\envs\Invoice\lib\site-packages\torch\nn\modules\module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "C:\Users\lucki\WORK\Anaconda3\envs\Invoice\lib\site-packages\torch\nn\modules\container.py", line 117, in forward
+    input = module(input)
+  File "C:\Users\lucki\WORK\Anaconda3\envs\Invoice\lib\site-packages\torch\nn\modules\module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "C:\Users\lucki\WORK\OFFICE\VAST\Invoice\yolov5-master\models\common.py", line 53, in forward
+    return x + self.cv2(self.cv1(x)) if self.add else self.cv2(self.cv1(x))
+RuntimeError: CUDA out of memory. Tried to allocate 14.00 MiB (GPU 0; 8.00 GiB total capacity; 6.28 GiB already allocated; 5.91 MiB free; 6.30 GiB reserved in total by PyTorch)
+Images sizes do not match. This will causes images to be display incorrectly in the UI.
