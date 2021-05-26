@@ -1,7 +1,0 @@
-.idea*
-*.pyc
-.DS_Store
-venv/
-DATASET/
-*.zip
-Production/*.zip
