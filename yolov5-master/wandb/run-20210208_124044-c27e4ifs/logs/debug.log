@@ -1,0 +1,36 @@
+2021-02-08 12:40:44,849 INFO    MainThread:17372 [wandb_setup.py:_flush():70] setting env: {}
+2021-02-08 12:40:44,849 INFO    MainThread:17372 [wandb_setup.py:_flush():70] multiprocessing start_methods=spawn
+2021-02-08 12:40:44,849 INFO    MainThread:17372 [wandb_setup.py:_flush():70] setting login settings: {}
+2021-02-08 12:40:44,849 INFO    MainThread:17372 [wandb_init.py:_log_setup():318] Logging user logs to C:\Users\lucki\WORK\OFFICE\VAST\Invoice\yolov5-master\wandb\run-20210208_124044-c27e4ifs\logs\debug.log
+2021-02-08 12:40:44,850 INFO    MainThread:17372 [wandb_init.py:_log_setup():319] Logging internal logs to C:\Users\lucki\WORK\OFFICE\VAST\Invoice\yolov5-master\wandb\run-20210208_124044-c27e4ifs\logs\debug-internal.log
+2021-02-08 12:40:47,231 INFO    MainThread:17372 [wandb_run.py:_console_start():1399] atexit reg
+2021-02-08 12:40:47,233 INFO    MainThread:17372 [wandb_run.py:_redirect():1262] redirect: SettingsConsole.WRAP
+2021-02-08 12:40:47,233 INFO    MainThread:17372 [wandb_run.py:_redirect():1297] Wrapping output streams.
+2021-02-08 12:40:47,233 INFO    MainThread:17372 [wandb_run.py:_redirect():1313] Redirects installed.
+2021-02-08 12:41:08,260 INFO    MainThread:17372 [wandb_run.py:_atexit_cleanup():1369] got exitcode: 1
+2021-02-08 12:41:08,273 INFO    MainThread:17372 [wandb_run.py:_restore():1341] restore
+2021-02-08 12:41:08,681 INFO    MainThread:17372 [wandb_run.py:_wait_for_finish():1492] got exit ret: file_counts {
+  wandb_count: 1
+  media_count: 2
+}
+pusher_stats {
+  uploaded_bytes: 792
+  total_bytes: 481843
+}
+
+2021-02-08 12:41:10,690 INFO    MainThread:17372 [wandb_run.py:_wait_for_finish():1492] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 5
+  media_count: 2
+}
+pusher_stats {
+  uploaded_bytes: 494712
+  total_bytes: 494712
+}
+
+2021-02-08 12:41:11,824 INFO    MainThread:17372 [wandb_run.py:_show_summary():1647] rendering summary
+2021-02-08 12:41:11,825 INFO    MainThread:17372 [wandb_run.py:_show_history():1685] rendering history
+2021-02-08 12:41:11,827 INFO    MainThread:17372 [wandb_run.py:_show_files():1714] logging synced files
+2021-02-08 12:41:11,831 INFO    MainThread:17372 [internal.py:handle_exit():156] Internal process exited

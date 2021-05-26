@@ -1,0 +1,32 @@
+2021-02-08 12:53:21,644 INFO    MainThread:16204 [wandb_setup.py:_flush():70] setting env: {}
+2021-02-08 12:53:21,644 INFO    MainThread:16204 [wandb_setup.py:_flush():70] multiprocessing start_methods=spawn
+2021-02-08 12:53:21,644 INFO    MainThread:16204 [wandb_setup.py:_flush():70] setting login settings: {}
+2021-02-08 12:53:21,644 INFO    MainThread:16204 [wandb_init.py:_log_setup():318] Logging user logs to C:\Users\lucki\WORK\OFFICE\VAST\Invoice\yolov5-master\wandb\run-20210208_125321-2f9br8bl\logs\debug.log
+2021-02-08 12:53:21,645 INFO    MainThread:16204 [wandb_init.py:_log_setup():319] Logging internal logs to C:\Users\lucki\WORK\OFFICE\VAST\Invoice\yolov5-master\wandb\run-20210208_125321-2f9br8bl\logs\debug-internal.log
+2021-02-08 12:53:23,385 INFO    MainThread:16204 [wandb_run.py:_console_start():1399] atexit reg
+2021-02-08 12:53:23,386 INFO    MainThread:16204 [wandb_run.py:_redirect():1262] redirect: SettingsConsole.WRAP
+2021-02-08 12:53:23,386 INFO    MainThread:16204 [wandb_run.py:_redirect():1297] Wrapping output streams.
+2021-02-08 12:53:23,386 INFO    MainThread:16204 [wandb_run.py:_redirect():1313] Redirects installed.
+2021-02-08 12:53:34,884 INFO    MainThread:16204 [wandb_run.py:_atexit_cleanup():1369] got exitcode: 1
+2021-02-08 12:53:34,885 INFO    MainThread:16204 [wandb_run.py:_restore():1341] restore
+2021-02-08 12:53:35,237 INFO    MainThread:16204 [wandb_run.py:_wait_for_finish():1492] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 791
+  total_bytes: 791
+}
+
+2021-02-08 12:53:37,244 INFO    MainThread:16204 [wandb_run.py:_wait_for_finish():1492] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 8552
+  total_bytes: 8552
+}
+
+2021-02-08 12:53:38,347 INFO    MainThread:16204 [wandb_run.py:_show_files():1714] logging synced files
+2021-02-08 12:53:38,350 INFO    MainThread:16204 [internal.py:handle_exit():156] Internal process exited
