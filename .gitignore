@@ -2,10 +2,6 @@
 *.pyc
 .DS_Store
 venv/
-<<<<<<< HEAD
 DATASET/
 *.zip
 Production/*.zip
-=======
-DATASET/
->>>>>>> 7772bab3a4907fb5d5e33dd597c362b5edf8b604
